@@ -1,0 +1,178 @@
+/* バカの一つ覚えみたいにFlexbox使ってるけど許して */
+/*許す。*/
+
+body {
+    background-color: whitesmoke;
+}
+
+.top {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(255, 255, 255);
+    font-family: "Noto Sans JP", sans-serif;
+    background-image: url(../images/school.webp);
+    text-align: center;
+    background-color: #83b0b3;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    
+}
+
+.top h1 {
+    font-size: calc(5vw + 10px);
+    font-weight:Bold;
+}
+.top p {
+    font-size: 1vw;
+    width: calc(100% - 10vw - 20px);
+}
+
+.navbar {
+    background-color: rgb(27, 27, 27);
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-brand {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.navbar-brand h4 {
+    margin: 0;
+}
+
+.navbar-toggler .material-symbols-outlined {
+    font-size: 180%;
+}
+
+.nav-item {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-line {
+    margin: 0px 20px 0px;
+    border: 1px solid rgb(196, 196, 196);
+    height: 30px;
+}
+
+.dropdown-menu {
+    display: none;
+    margin-top: 40px;
+    min-width: 120px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 0;
+    border: 0;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    color: rgb(196, 196, 196);
+}
+
+.dropdown-item:hover {
+    background-color: rgb(53, 53, 53);
+    color: rgb(196, 196, 196);
+}
+
+.dropdown-divider {
+    background-color: rgb(196, 196, 196);
+    border-width: 2px;
+}
+
+.temp01 {
+    display: flex;
+    width: 80vw;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    margin: 5% auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.block {
+    margin: 3% auto;
+    width: 80%;
+}
+
+.block h3 {
+    text-align: center;
+    font-size: 300%;
+}
+
+.block h3::after,.block h3::before {
+    content: "";
+    width: 50px;
+    display: inline-block;
+    margin: 10px;
+    top: 50% + 1px;
+    height: 2px;
+    background-color: rgb(27, 27, 27);
+}
+
+.article {
+    background-color: #fdfdfd;
+    padding: 4%;
+    margin-top: 30px;
+}
+
+.footer {
+    height: 380px;
+    padding: 3%;
+    font-size: small;
+    text-align: center;
+    color: white;
+    background-color: rgb(27, 27, 27);
+}
+
+.ft-menu {
+    display: flex;
+    margin: 20px;
+    text-align: center;
+    /* calc(0.8vw + 3px); ←まあこれ適当に調整しただけだし消していいよ*/
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.ft-menu div:not(.line) {
+    width: 150px;
+}
+
+.line {
+    margin: 0px 40px 0px;
+    border: 1px solid #fff;
+    height: 160px;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-brand h4 {
+        display: none;
+    }
+}
